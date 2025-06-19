@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+
+<html lang="zh">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+
+    <title>YuePoker</title>
+    <link rel="icon" href="/images/favicon.svg" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/index.css">
+</head>
+
+<body>
+    <div class="page-wrapper">
+        <div class="container">
+            <div class="topbar-utils">
+                <img class="gaming-cert" src="/images/gaming-certified.svg" alt="Gaming Labs Certified">
+           <!--     <div class="language-switcher">
+                    <a href="index-en.html" class="lang en">EN</a>
+                    <span class="lang zh active">中文</span>
+                </div>-->
+            </div>
+
+            <div class="logo">
+                <img src="/images/logo.svg?ver=1" alt="Yuepoker Logo">
+            </div>
+
+            <div class="download-buttons">
+                <a href="https://jp-landing-assets.s3.amazonaws.com/apk/YuePuKe_v1.01.apk" class="btn android">
+                    <img src="/images/android-icon.svg" alt="Install on Android"> 下载 Android
+                </a>
+
+
+                <a  href="" id="installIosBtn" data-target="installIosModal" class="btn ios">
+                    <img src="/images/ios-icon.svg" alt="Install on iOS"> 下载 iOS
+                </a>
+                <a href="https://play.yuepuke.com" target="_blank" rel="noopener noreferrer" class="btn ios">
+                    <img src="/images/ios-icon.svg" alt="Play in Browser"> 在H5玩
+                </a>
+            </div>
+
+            <div class="qr-codes-section">
+                <h3 class="qr-codes-title">联系</h3>
+                <div class="qr-codes">
+                    <div class="qr-code">
+                        <img src="/images/contact-us-qr-code.jpg" alt="QR code">
+                    </div>
+                </div>
+                <div class="qr-code-description"><img src="/images/telegram-logo-icon.svg" alt="telegram-logo"><a href="https://t.me/gopuke"  target="_blank">@gopuke</a></div>
+            </div>
+            <div class="qr-codes-section">
+                <h3 class="qr-codes-title">社交媒体</h3>
+                <div class="qr-codes">
+                    <div class="qr-code">
+                        <img src="/images/join-us-qr-code.jpg" alt="QR code">
+                    </div>
+                </div>
+                <div class="qr-code-description"><img src="/images/telegram-logo-icon.svg" alt="telegram-logo"><a href="https://t.me/yuepuke"  target="_blank">@yuepuke</a></div>
+            </div>
+
+            <div class="footer-links">
+                <button id="termsBtn" data-target="termsModal">公平游戏</button>
+                <button id="privacyBtn" data-target="privacyModal">隐私政策</button>
+            </div>
+
+            <div class="crypto-buttons">
+                <a href="#" class="crypto tether">
+                    <img src="/images/tether-icon.svg" alt="Tether">
+                </a>
+                <a href="#" class="crypto litecoin">
+                    <img src="/images/litecoin-icon.svg" alt="Litecoin">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="termsModal" class="modal">
+        <div class="modal-container">
+            <div class="topbar-utils">
+                <img class="gaming-cert" src="/images/gaming-certified.svg" alt="Gaming Labs Certified">
+                <div class="language-switcher">
+                    <a href="index-en.html" class="lang en">EN</a>
+                    <span class="lang zh active">中文</span>
+                </div>
+            </div>
+            <div class="modal-content">
+                <div class="modal-logo">
+                    <img src="/images/logo.svg" alt="logo">
+                </div>
+                <h3 class="modal-title">公平游戏</h3>
+                <p class="modal-title-desc">我们的平台旨在确保透明度，防止作弊，并为休闲玩家提供公平竞争的环境。</p>
+                <div class="modal-description">
+                    <h5>✨ 1. 反合谋措施</h5>
+                    <p>我们积极监控合谋和不公平游戏行为。我们的安全团队和自动化系统会检测可疑活动，确保没有玩家通过合作获得不公平的优势。</p>
+
+                    <h5>✨ 2. 认证随机数生成器 (RNG)</h5>
+                    <p>我们的发牌完全随机，经过独立测试和认证的随机数生成器 (RNG) 确保每场游戏都公平且不可预测。</p>
+
+                    <h5>✨ 3. 反AI政策</h5>
+                    <p>我们严格禁止使用机器人。我们的先进检测系统会分析游戏模式，以识别并移除任何自动化账号，确保您始终与真实玩家对战。如果您发现任何异常玩家行为，请发送信息至 <a href="mailto:security@yuepuke.com">security@yuepuke.com</a>，我们的安全团队将在24小时内回复。</p>
+
+                    <h5>✨ 4. 资金安全与透明支付</h5>
+                    <p>您的资金在我们这里是安全的。我们采用顶级加密和安全协议保护您的资金，并且所有奖金都会透明发放，无任何隐藏条件。</p>
+
+                    <h5>✨ 5. 玩家安全与支持</h5>
+                    <p>我们高度重视玩家保护。我们的平台采用先进的防欺诈技术和数据加密，配备专业支持团队，随时为您解决任何公平性问题。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="privacyModal" class="modal">
+        <div class="modal-container">
+            <div class="topbar-utils">
+                <img class="gaming-cert" src="/images/gaming-certified.svg" alt="Gaming Labs Certified">
+                <div class="language-switcher">
+                    <a href="index-en.html" class="lang en">EN</a>
+                    <span class="lang zh active">中文</span>
+                </div>
+            </div>
+            <div class="modal-content">
+                <div class="modal-logo">
+                    <img src="/images/logo.svg" alt="logo">
+                </div>
+                <div class="modal-text-navigation">
+                    <div class="modal-text-wrapper">
+                        <h3 class="modal-title">隐私政策</h3>
+                        <div class="modal-description">
+                            <h5>1. 简介</h5>
+                            <p>本隐私政策说明了我们在您使用我们的扑克平台时如何收集、使用和保护您的个人信息。使用我们的服务即表示您同意本政策的条款。</p>
+
+                            <h5>2. 数据收集</h5>
+                            <p>我们仅收集创建账户和平台功能所需的基本信息，包括用户名、电子邮件和游戏数据。我们不会收集敏感个人信息。</p>
+
+                            <h5>3. 数据使用</h5>
+                            <p>我们使用收集的数据来提供和改进我们的服务、个性化用户体验，并确保公平游戏。除非法律要求，我们不会出售或共享您的数据。</p>
+
+                            <h5>4. 数据安全</h5>
+                            <p>我们采用行业标准的安全措施来保护您的信息。但任何在线服务都无法保证完全安全，因此请确保您的账户安全。</p>
+
+                            <h5>5. 公平游戏</h5>
+                            <p>我们致力于为玩家提供公平和安全的游戏环境，尤其是休闲玩家。我们的平台采用先进的安全措施，包括反串通技术、欺诈检测系统和实时游戏监控。我们严禁使用机器人、不公平软件和任何形式的作弊行为。任何违规行为可能导致账户暂停或永久封禁。我们的目标是确保所有玩家都能享受安全、公正和有竞争力的游戏体验</p>
+
+                            <h5>6. 第三方服务</h5>
+                            <p>我们的平台可能包含第三方服务的链接，我们不对其隐私做法负责。</p>
+
+                            <h5>7. 用户权利</h5>
+                            <p>您有权访问、更新或删除您的个人信息。如有任何隐私相关请求，请联系我们的支持团队。</p>
+
+                            <h5>8. 政策变更</h5>
+                            <p>我们可能会不时更新本隐私政策，继续使用平台即表示您接受任何修改。</p>
+
+                            <h5>9. 联系我们</h5>
+                            <p>如有任何问题，请联系我们： <a href="mailto:security@yuepuke.com">security@yuepuke.com</a>。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="installIosModal" class="modal">
+        <div class="modal-container  install-modal-container">
+            <div class="topbar-utils">
+                <img class="gaming-cert" src="/images/gaming-certified.svg" alt="Gaming Labs Certified">
+                <div class="language-switcher">
+                    <a href="index-en.html" class="lang en">EN</a>
+                    <span class="lang zh active">中文</span>
+                </div>
+            </div>
+            <div class="modal-content">
+                <div class="modal-content-install"><h3>如何在 iOS 上安装该应用</h3>
+
+                    <div class="install-ios">
+                        <img src="/images/install-ios-qr-code.png" alt="install-ios-qr-code" class="install-ios-img">
+
+                        <a href="https://www.signapps.org/eapp_param=5516_1727877050"  class="btn">
+                            <img src="/images/ios-icon.svg" alt="Get App"> 下载app
+                        </a>
+
+                    </div>
+
+                <div class="modal-content-install-card-container">
+
+                    <div class="modal-content-install-card">
+                        <img src="/images/cn/install-card-1.png" alt="install-card-1">
+                        <p>1.<br> 点击“安装”</p>
+                    </div>
+
+                    <div class="modal-content-install-card">
+                        <img src="/images/cn/install-card-2.png" alt="install-card-2">
+                        <p>2.<br> 在设置中进入<br>
+                            “VPN与设备管理”</p>
+                    </div>
+
+                    <div class="modal-content-install-card">
+                        <img src="/images/cn/install-card-3.png" alt="install-card-3">
+                        <p>3.<br>选择开发者配置文件 <br>
+                            （企业名称可能有所不同）</p>
+                    </div>
+
+                    <div class="modal-content-install-card">
+                        <img src="/images/cn/install-card-4.png" alt="install-card-4">
+                        <p>4.<br>点击“信任”进行确认</p>
+                    </div>
+
+                    <div class="modal-content-install-card">
+                        <img src="/images/cn/install-card-5.png" alt="install-card-5">
+                        <p>5.<br>点击“允许并重启”<br>
+                             以完成安装</p>
+                    </div>
+
+                </div>
+
+                <div class="install-ios">
+                    <img src="/images/install-ios-qr-code.png" alt="install-ios-qr-code" class="install-ios-img">
+
+                    <a href="https://www.signapps.org/eapp_param=5516_1727877050"  class="btn">
+                        <img src="/images/ios-icon.svg" alt="Get App"> 下载app
+                    </a>
+
+                </div>
+
+            </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

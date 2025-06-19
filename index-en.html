@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+
+    <title>YuePoker</title>
+    <link rel="icon" href="/images/favicon.svg" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/index.css">
+</head>
+
+<body>
+    <div class="page-wrapper">
+        <div class="container">
+            <div class="topbar-utils">
+                <img class="gaming-cert" src="/images/gaming-certified.svg" alt="Gaming Labs Certified">
+                <div class="language-switcher">
+                    <span class="lang en active">EN</span>
+                    <a href="index.html" class="lang zh">中文</a>
+                </div>
+            </div>
+            <div class="logo">          
+                <img src="/images/logo.svg?ver=1" alt="Yuepoker Logo">
+            </div>
+
+            <div class="download-buttons">
+                <a href="https://jp-landing-assets.s3.amazonaws.com/apk/YuePuKe_v1.01.apk" class="btn android">
+                    <img src="/images/android-icon.svg" alt="Install on Android"> Install on Android
+                </a>
+                <a href=""  id="installIosBtn" data-target="installIosModal" class="btn ios">
+                    <img src="/images/ios-icon.svg" alt="Install on iOS"> Install on iOS
+                </a>
+                <a href="https://play.yuepuke.com" target="_blank" rel="noopener noreferrer" class="btn ios">
+                    <img src="/images/browser-icon.svg" alt="Play in Browser"> Play in Browser
+                </a>
+            </div>
+
+            <div class="qr-codes-section">
+                <h3 class="qr-codes-title">Contact us</h3>
+                <div class="qr-codes">
+                    <div class="qr-code">
+                        <img src="/images/contact-us-qr-code.jpg" alt="QR code">
+                    </div>       
+                </div>
+                <div class="qr-code-description"><img src="/images/telegram-logo-icon.svg" alt="telegram-logo"><a href="https://t.me/gopuke"  target="_blank">@gopuke</a></div>
+            </div>
+            <div class="qr-codes-section">
+                <h3 class="qr-codes-title">Join us on social</h3>
+                <div class="qr-codes">
+                    <div class="qr-code">
+                        <img src="/images/join-us-qr-code.jpg" alt="QR code">
+                    </div>
+                </div>
+                <div class="qr-code-description"><img src="/images/telegram-logo-icon.svg" alt="telegram-logo"><a href="https://t.me/yuepuke"  target="_blank">@yuepuke</a></div>
+            </div>
+
+            <div class="footer-links">
+                <button id="termsBtn" data-target="termsModal">Fair Play</button>
+                <button id="privacyBtn" data-target="privacyModal">Privacy Policy</button>
+            </div>
+
+            <div class="crypto-buttons">
+                <a href="#" class="crypto tether">
+                    <img src="/images/tether-icon.svg" alt="Tether">
+                </a>
+                <a href="#" class="crypto litecoin">
+                    <img src="/images/litecoin-icon.svg" alt="Litecoin">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="termsModal" class="modal">
+        <div class="modal-container">
+            <div class="topbar-utils">
+                <img class="gaming-cert" src="/images/gaming-certified.svg" alt="Gaming Labs Certified">
+                <div class="language-switcher">
+                    <span class="lang en active">EN</span>
+                    <a href="index.html" class="lang zh">中文</a>
+                </div>
+            </div>
+            <div class="modal-content">
+                <div class="modal-logo">
+                    <img src="/images/logo.svg" alt="logo">
+                </div>
+                <h3 class="modal-title">Fair Play</h3>
+                <p class="modal-title-desc">Our platform is designed to ensure transparency, prevent cheating, and provide a level playing field for recreational players.</p>
+                <div class="modal-description">
+                    <h5>✨ 1. Anti-Collusion Measures</h5>
+                    <p>We actively monitor for collusion and unfair play. Our security team and automated systems detect suspicious activities, ensuring that no players gain an unfair advantage by working together against others..</p>
+
+                    <h5>✨ 2. Certified Random Number Generator (RNG)</h5>
+                    <p>Card distribution is completely random, thanks to our independently tested and certified Random Number Generator (RNG). This guarantees fair and unpredictable outcomes in every game.</p>
+
+                    <h5>✨ 3. Anti AI Policy</h5>
+                    <p>We strictly prohibit the use of bots. Our advanced detection systems analyze gameplay patterns to identify and remove any automated accounts, ensuring that you always play against real people. If you notice any unusual player behavior, please report it to <a href="mailto:security@yuepuke.com">security@yuepuke.com</a>, and our security team will respond within 24 hours.</p>
+
+                    <h5>✨ 4. Secure Funds & Transparent Payouts</h5>
+                    <p>Your bankroll is safe with us. We use top-tier encryption and security protocols to protect your funds, and all winnings are paid out transparently without hidden conditions.</p>
+   
+                    <h5>✨ 5. Player Security & Support</h5>
+                    <p>We take player protection seriously. Our platform employs advanced fraud prevention techniques, data encryption, and a dedicated support team ready to assist with any concerns about fair play.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="privacyModal" class="modal">
+        <div class="modal-container">
+            <div class="topbar-utils">
+                <img class="gaming-cert" src="/images/gaming-certified.svg" alt="Gaming Labs Certified">
+                <div class="language-switcher">
+                    <span class="lang en active">EN</span>
+                    <a href="index.html" class="lang zh">中文</a>
+                </div>
+            </div>
+            <div class="modal-content">
+                <div class="modal-logo">
+                    <img src="/images/logo.svg" alt="logo">
+                </div>
+                <div class="modal-text-navigation">
+                    <div class="modal-text-wrapper">
+                        <h3 class="modal-title">Privacy Policy</h3>
+                        <div class="modal-description">
+                            <h5>1. Introduction</h5>
+                            <p>This Privacy Policy explains how we collect, use, and protect your personal information when you use our poker platform. By using our services, you agree to the terms of this policy.</p>
+
+                            <h5>2. Data Collection</h5>
+                            <p>We collect minimal personal information necessary for account creation and platform functionality, including username, email, and gameplay data. We do not collect sensitive personal information.</p>
+
+                            <h5>3. Data Usage</h5>
+                            <p>We use collected data to provide and improve our services, personalize user experience, and ensure fair gameplay. We do not sell or share your data with third parties except as required by law.</p>
+
+                            <h5>4. Data Security</h5>
+                            <p>We implement industry-standard security measures to protect your information. However, no online service is entirely secure, and we encourage users to protect their accounts.</p>
+
+                            <h5>5. Fair Play</h5>
+                            <p>We are committed to maintaining a fair and secure gaming environment, especially for recreational players. Our platform employs advanced security measures, including anti-collusion technology, fraud detection systems, and real-time game monitoring. We strictly prohibit the use of bots, unfair software, and any form of cheating. Any violations may result in account suspension or permanent bans. Our goal is to ensure a safe, enjoyable, and competitive experience for all players.</p>
+
+                            <h5>6. Third-Party Services</h5>
+                            <p>Our platform may contain links to third-party services. We are not responsible for their privacy practices.</p>
+
+                            <h5>7. User Rights</h5>
+                            <p>You have the right to access, update, or delete your personal information. For any privacy-related requests, please contact our support team.</p>
+
+                            <h5>8. Changes to This Policy</h5>
+                            <p>We may update this Privacy Policy from time to time. Continued use of the platform constitutes acceptance of any modifications.</p>
+
+                            <h5>9. Contact Us</h5>
+                            <p>If you have any questions, please contact us at <a href="mailto:security@yuepuke.com">security@yuepuke.com</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="installIosModal" class="modal">
+        <div class="modal-container install-modal-container">
+            <div class="topbar-utils">
+                <img class="gaming-cert" src="/images/gaming-certified.svg" alt="Gaming Labs Certified">
+                <div class="language-switcher">
+                    <span class="lang en active">EN</span>
+                    <a href="index.html" class="lang zh">中文</a>
+                </div>
+            </div>
+            <div class="modal-content">
+                <div class="modal-content-install"><h3>How to install app on IOS</h3>
+
+                    <div class="install-ios">
+                        <img src="/images/install-ios-qr-code.png" alt="install-ios-qr-code" class="install-ios-img">
+                       
+                        <a href="https://www.signapps.org/eapp_param=5516_1727877050"  class="btn">
+                            <img src="/images/ios-icon.svg" alt="Get App"> Get App
+                        </a>
+                       
+                    </div>
+
+                <div class="modal-content-install-card-container">
+
+                    <div class="modal-content-install-card">
+                        <img src="/images/en/install-card-1.png" alt="install-card-1">
+                        <p>1.<br> Tap on Install</p>
+                    </div>
+
+                    <div class="modal-content-install-card">
+                        <img src="/images/en/install-card-2.png" alt="install-card-2">
+                        <p>2.<br> Go to "VPN & Device Management" in Settings</p>
+                    </div>
+
+                    <div class="modal-content-install-card">
+                        <img src="/images/en/install-card-3.png" alt="install-card-3">
+                        <p>3.<br>Select the developer profile (Enterprise name may vary)</p>
+                    </div>
+
+                    <div class="modal-content-install-card">
+                        <img src="/images/en/install-card-4.png" alt="install-card-4">
+                        <p>4.<br>Tap "Trust" to confirm</p>
+                    </div>
+
+                    <div class="modal-content-install-card">
+                        <img src="/images/en/install-card-5.png" alt="install-card-5">
+                        <p>5.<br>Tap "Allow & Restart" to complete the installation</p>
+                    </div>
+
+                </div>
+
+                <div class="install-ios">
+                    <img src="/images/install-ios-qr-code.png" alt="install-ios-qr-code" class="install-ios-img">
+                   
+                    <a href="https://www.signapps.org/eapp_param=5516_1727877050"  class="btn">
+                        <img src="/images/ios-icon.svg" alt="Get App"> Get App
+                    </a>
+                   
+                </div>
+
+            </div>
+       
+            </div>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

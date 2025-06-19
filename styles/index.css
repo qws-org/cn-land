@@ -1,0 +1,526 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #1d112e;
+  text-align: center;
+  position: relative;
+  font-family: "Inter", sans-serif, serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 24px;
+  min-height: 100vh;
+  color: #fff;
+  overflow-wrap: break-word;
+  line-break: strict;
+}
+
+body::after {
+  content: "";
+  position: absolute;
+  top: 680px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(40, 22, 63, 0) 0%,
+    #28163f 21.5%,
+    #0e061a 100%
+  );
+  z-index: 1;
+}
+
+.page-wrapper {
+  background: url("/images/background-desktop.jpg") no-repeat top center;
+  background-size: contain;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.page-wrapper.modal-open {
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.topbar-utils{
+  display: flex;
+  align-items: center;
+  position: absolute;
+  z-index: 100;
+  top: 24px;
+  right: 340px;
+  gap:16px;
+}
+
+.language-switcher {
+  display: flex;
+  justify-content: flex-end;
+  background: rgba(0, 0, 0, 0.9);
+  padding: 4px;
+  border-radius: 12px;
+}
+
+.lang {
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 20px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+  width: 36px;
+  height: 28px;
+  padding: 4px;
+}
+
+.lang.active {
+  background-color: #5f3c98;
+  color: #fff;
+  border-radius: 8px;
+}
+
+.logo img {
+  max-width: 202px;
+  margin-bottom: 56px;
+  padding-top: 118px;
+}
+
+.download-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 198px;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(110, 68, 178, 1);
+  background-blend-mode: overlay;
+  background-image: radial-gradient(
+    101.78% 153.13% at 50% 0%,
+    rgba(255, 241, 241, 0.6) 0%,
+    rgba(0, 0, 0, 0.6) 100%
+  );
+  background-size: cover;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+  padding: 22px 30px;
+  color: #fff;
+  border-radius: 16px;
+  text-decoration: none;
+  min-width: 292px;
+}
+
+.btn img {
+  margin-right: 16px;
+}
+
+.qr-codes-section {
+  margin-bottom: 80px;
+}
+
+.qr-codes-title {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 40px;
+  text-align: center;
+  margin: 0 0 48px;
+}
+
+.qr-codes {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.qr-code {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.qr-code p {
+  margin: 0;
+}
+
+.qr-code img {
+  width: 220px;
+  height: 220px;
+  margin-bottom: 8px;
+  border-radius: 8px;
+}
+.qr-code-description {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+.qr-code-description a {
+  color: white;
+  text-decoration: none;
+  margin: 0;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 20px;
+}
+
+.social-links-section {
+  margin-bottom: 80px;
+}
+
+.social-links-title {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 40px;
+  text-align: center;
+  margin: 0 0 48px;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.social-links img {
+  width: 112px;
+  height: 112px;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.footer-links button,
+.modal-description a {
+  color: #997cc7;
+  outline: none;
+  text-decoration: none;
+  text-align: center;
+  border: none;
+  background: transparent;
+}
+
+.crypto-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.crypto {
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  margin-bottom: 80px;
+}
+
+.crypto.tether {
+  padding: 11px 8px 10.52px 9px;
+}
+
+.crypto.litecoin {
+  padding: 13px 10px 12.46px 10px;
+}
+
+.crypto img {
+  display: block;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 3;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background: #0d0c0f;
+  overflow: auto;
+}
+
+.modal-container {
+  max-width: 1920px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.modal-content {
+  max-width: 1288px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.modal-logo {
+  text-align: center;
+  margin-bottom: 80px;
+  padding-top: 80px;
+}
+
+.modal-logo img {
+  width: 137.7px;
+  height: 162.3px;
+}
+
+.modal-title {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 40px;
+  margin: 0 0 48px;
+  text-align: left;
+}
+.modal-title-desc {
+  font-size: 15px;
+  line-height: 20px;
+  text-align: left;
+  margin: 0 0 24px;
+}
+
+.modal-description {
+  margin: 0 0 66px;
+  text-align: left;
+}
+
+.modal-description h4 {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.modal-description li {
+  font-size: 15px;
+  line-height: 20px;
+  padding-left: 20px;
+}
+
+.modal-description p {
+  font-size: 15px;
+  line-height: 20px;
+  text-align: left;
+  margin: 0 0 24px;
+}
+.modal-description h5 {
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: 700;
+  text-align: left;
+  margin: 0 0 8px;
+}
+
+.modal-description strong {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.modal-text-navigation {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  gap: 48px;
+}
+
+.modal-navigation {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.modal-navigation li {
+  display: block;
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: 700;
+  text-align: left;
+  color: rgba(255, 255, 255, 0.5);
+  background-color: #29252f;
+  cursor: pointer;
+  width: 300px;
+  padding: 16px 24px;
+  margin-bottom: 2px;
+}
+
+.modal-navigation li.active {
+  background-color: #33244b;
+  color: #997cc7;
+  cursor: default;
+}
+.install-modal-container {
+  background: linear-gradient(180deg, #0b0710 0%, #1f132e 50.5%, #0b0710 100%);
+}
+.modal-content-install {
+  padding: 80px 0;
+}
+.modal-content-install h3 {
+  font-size: 32px;
+  line-height: 40px;
+  font-weight: 700;
+  color: #f9d48c;
+  margin: 0 0 40px;
+}
+.modal-content-install-card-container {
+  padding: 56px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 64px 140px;
+  max-width: 854px;
+  margin: 0 auto;
+}
+.modal-content-install-card {
+  max-width: 244px;
+}
+.modal-content-install-card img {
+  border-radius: 12px;
+  margin-bottom: 24px;
+}
+.modal-content-install-card p {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+  margin: 0;
+}
+.install-ios {
+  max-width: 292px;
+  margin: 0 auto;
+}
+.install-ios-img {
+  margin-bottom: 24px;
+}
+.install-ios {
+  max-width: 292px;
+}
+
+@media screen and (max-width: 1920px) {
+  .page-wrapper {
+    background-size: 1920px auto;
+  }
+}
+
+@media screen and (max-width: 1533px) {
+  .topbar-utils {
+    right: 148px;
+  }
+}
+
+@media screen and (max-width: 1366px) {
+  .topbar-utils {
+    right: 60px;
+    margin-bottom: 32px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .modal-text-navigation {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .page-wrapper {
+    background: url("/images/background-mobile.jpg") no-repeat top center;
+    background-size: 800px 900px;
+  }
+
+  .logo img {
+    padding-top: 171px;
+    width: 180px;
+    height: auto;
+    margin-bottom: 32px;
+  }
+
+  .topbar-utils {
+    right: 16px;
+  }
+
+  .download-buttons {
+    margin-bottom: 220px;
+  }
+
+  .qr-codes-section {
+    margin-bottom: 64px;
+  }
+
+  .qr-codes-title {
+    font-size: 26px;
+    line-height: 32px;
+    margin-bottom: 32px;
+  }
+
+  .qr-codes {
+    gap: 24px;
+  }
+
+  .qr-code p {
+    font-size: 15px;
+    line-height: 20px;
+  }
+
+  .qr-code img {
+    width: 148px;
+    height: 148px;
+    border-radius: 8px;
+  }
+
+  .social-links-section {
+    margin-bottom: 64px;
+  }
+
+  .social-links-title {
+    font-size: 26px;
+    line-height: 32px;
+    margin-bottom: 32px;
+  }
+
+  .social-links {
+    gap: 24px;
+  }
+
+  .social-links img {
+    width: 96px;
+    height: 96px;
+  }
+
+  .footer-links {
+    gap: 32px;
+    margin-bottom: 32px;
+  }
+
+  .crypto {
+    margin-bottom: 48px;
+  }
+  .modal-content-install-card-container {
+    margin: 56px 0 0;
+
+    gap: 56px 100px;
+    max-width: 768px;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .topbar-utils{
+    justify-content: space-between;
+    width: 100%;
+    right: 0;
+    padding: 0 16px;
+  }
+}
