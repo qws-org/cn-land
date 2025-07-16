@@ -392,6 +392,7 @@ body::after {
 .modal-content-install-card img {
   border-radius: 12px;
   margin-bottom: 24px;
+  max-width: 244px;
 }
 .modal-content-install-card p {
   font-size: 20px;
