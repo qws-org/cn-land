@@ -65,6 +65,111 @@ body::after {
   gap:16px;
 }
 
+.topbar-dropdown{
+  display: flex;
+  align-items: center;
+  position: absolute;
+  z-index: 100;
+  top: 24px;
+  left: 340px;
+  gap:16px;
+}
+/* menu*/
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-button {
+  background-blend-mode: overlay;
+  background: rgba(110, 68, 178, 1) radial-gradient(
+          101.78% 153.13% at 50% 0%,
+          rgba(255, 241, 241, 0.6) 0%,
+          rgba(0, 0, 0, 0.6) 100%
+  );
+  padding: 6px 14px;
+  color: #fff;
+  border-radius: 16px;
+  border: none;
+
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: none;
+  flex-direction: row;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 8px;
+  border-radius: 8px;
+  z-index: 100;
+  margin-top: 6px;
+}
+.dropdown.open .dropdown-menu {
+  display: flex;
+}
+.dropdown:hover .dropdown-menu {
+  display: flex;
+}
+
+.menu-column {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  min-width: 200px;
+  text-align: left;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #ffffff;
+}
+
+.menu-column:last-child {
+  border-right: none;
+}
+
+.menu-column li {
+  position: relative;
+  padding:  6px 16px;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background 0.6s ease;
+
+}
+
+
+.has-submenu::after {
+
+  float: right;
+  color: #999;
+}
+
+/* Подменю (вторая и третья колонка) */
+.menu-column .submenu {
+  position: absolute;
+  top: -20px;
+
+  left: 100%;
+  display: none;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 8px;
+  list-style: none;
+  min-width: 200px;
+  z-index: 1;
+  padding:  8px;
+}
+.submenu a {
+  color: #fff;
+  text-decoration: none;
+}
+.menu-column li:hover > .submenu {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+/* menu end*/
+
 .language-switcher {
   display: flex;
   justify-content: flex-end;
@@ -410,7 +515,9 @@ body::after {
 .install-ios {
   max-width: 292px;
 }
-
+.mobile-enabled {
+  display: none;
+}
 @media screen and (max-width: 1920px) {
   .page-wrapper {
     background-size: 1920px auto;
@@ -421,11 +528,18 @@ body::after {
   .topbar-utils {
     right: 148px;
   }
+  .topbar-dropdown{
+    left: 148px;
+  }
 }
 
 @media screen and (max-width: 1366px) {
   .topbar-utils {
     right: 60px;
+    margin-bottom: 32px;
+  }
+  .topbar-dropdown{
+    left: 60px;
     margin-bottom: 32px;
   }
 }
@@ -452,7 +566,13 @@ body::after {
   .topbar-utils {
     right: 16px;
   }
-
+  .topbar-dropdown {
+    left: 16px;
+    display: none;
+  }
+.mobile-enabled{
+  display: block;
+}
   .download-buttons {
     margin-bottom: 220px;
   }
@@ -519,9 +639,16 @@ body::after {
 
 @media screen and (max-width: 390px) {
   .topbar-utils{
-    justify-content: space-between;
+    justify-content: end;
     width: 100%;
     right: 0;
+    padding: 0 16px;
+  }
+
+  .topbar-dropdown{
+    justify-content: space-between;
+    width: 100%;
+    left: 0;
     padding: 0 16px;
   }
 }
